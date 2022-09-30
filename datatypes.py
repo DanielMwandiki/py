@@ -24,3 +24,5 @@ print (user)
 #delete
 del user["family_name"]
 print (user)
+user["family_name"] = "Doroniko"
+print (user)
