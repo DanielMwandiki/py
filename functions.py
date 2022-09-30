@@ -7,6 +7,6 @@ hello_word()
 # return a funtion
 def hello_world():
     return 'Hello Word'
-#assign a variablr
+#assign a variable
 greeting=hello_world()
 print(greeting)
