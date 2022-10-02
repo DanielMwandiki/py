@@ -22,7 +22,8 @@ def translate_text(**kwargs):
     client = boto3.client('translate')
     response = client.translate_text(**kwargs)
     print(response)
-
+    
+# define the inputs
 text = input("Provide the text you want translated : ")
 source_language_code = input("Provide the two letter source language code : ")
 target_language_code = input("Provide the two letter target language code : ")
