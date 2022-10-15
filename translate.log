@@ -1,0 +1,124 @@
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x000001B452CB24D0>
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\translate\2017-07-01\service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x000001B452BB4EE0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x000001B452CB3BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x000001B452CB3880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x000001B452CD5480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.83 Python/3.10.7 Windows/10 Botocore/1.27.83'}, 'body': b'{"Text": "I am learning to code in AWS", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-west-1.amazonaws.com/', 'context': {'client_region': 'us-west-1', 'client_config': <botocore.config.Config object at 0x000001B452D86B90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001B452D86A40>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x000001B452CB3AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-west-1.amazonaws.com
+x-amz-date:20221015T050918Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+87c449b0971c1c902350d536470e5b7f3e0254286e7b0a4cd0a9033e05d40024
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20221015T050918Z
+20221015/us-west-1/translate/aws4_request
+7945ae08960b4b44d0ac9864ed52625ac1a4bf9f205f4e27cc0e6e0aed5d7e26
+DEBUG:botocore.auth:Signature:
+f7cd6b8986c9fce7f4d7a7e7c4f54b6dfb8f6874a220f146d5a53da08d1ca4ba
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x000001B452CD5B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-west-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.83 Python/3.10.7 Windows/10 Botocore/1.27.83', 'X-Amz-Date': b'20221015T050918Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAU5VI35SKRVQQSBCC/20221015/us-west-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=f7cd6b8986c9fce7f4d7a7e7c4f54b6dfb8f6874a220f146d5a53da08d1ca4ba', 'amz-sdk-invocation-id': b'bdc0c3e8-4ef6-4b06-ae73-f19747e56585', 'amz-sdk-request': b'attempt=1', 'Content-Length': '96'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-west-1.amazonaws.com:443 "POST / HTTP/1.1" 200 101
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '2e24fc97-10cf-4d46-95ef-4006da5d9531', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '101', 'Date': 'Sat, 15 Oct 2022 05:09:19 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"J\'apprends \xc3\xa0 coder dans AWS"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x000001B452D874C0>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000024FD09924D0>
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\translate\2017-07-01\service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x0000024FD0894EE0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\data\_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x0000024FD0993BE0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x0000024FD0993880>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x0000024FD09B5480>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.83 Python/3.10.7 Windows/10 Botocore/1.27.83'}, 'body': b'{"Text": "I am learning to code in AWS", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-west-1.amazonaws.com/', 'context': {'client_region': 'us-west-1', 'client_config': <botocore.config.Config object at 0x0000024FD0A66B90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000024FD0A66A40>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x0000024FD0993AC0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-west-1.amazonaws.com
+x-amz-date:20221015T051017Z
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-target
+87c449b0971c1c902350d536470e5b7f3e0254286e7b0a4cd0a9033e05d40024
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20221015T051017Z
+20221015/us-west-1/translate/aws4_request
+0d8bba593a5c658d374dff555f3522907b95674cdd5ff03e9bab74e58ba66637
+DEBUG:botocore.auth:Signature:
+e11f169ae2498d327f94e780558110ded7846b655caa0b2f9de80bb1f52d7ed4
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x0000024FD09B5B40>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-west-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.83 Python/3.10.7 Windows/10 Botocore/1.27.83', 'X-Amz-Date': b'20221015T051017Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAU5VI35SKRVQQSBCC/20221015/us-west-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=e11f169ae2498d327f94e780558110ded7846b655caa0b2f9de80bb1f52d7ed4', 'amz-sdk-invocation-id': b'e6025675-2d30-4cb7-a773-f342aecad9e7', 'amz-sdk-request': b'attempt=1', 'Content-Length': '96'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\danma\AppData\Local\Programs\Python\Python310\lib\site-packages\botocore\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-west-1.amazonaws.com:443 "POST / HTTP/1.1" 200 101
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'd4fe1f60-3cd0-415c-9d69-89a5214a4182', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '101', 'Date': 'Sat, 15 Oct 2022 05:10:18 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"J\'apprends \xc3\xa0 coder dans AWS"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x0000024FD0A674C0>
+DEBUG:botocore.retryhandler:No retry needed.
