@@ -1,6 +1,6 @@
 # python practise 
 
-In this workshop, you I learned how to:
+In this workshop,  I learned how to:
 
 Setup and use Cloud9
 Use the python IDE
